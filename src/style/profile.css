@@ -119,9 +119,10 @@ body{
 
 .card__description {
   margin: 10px 0 0;
-  font-size: 14px;
+  
   color: #ffffff;
-  line-height: 1.4;
+  /* line-height: 1.4; */
+  font-size: x-large;
 }
 
 .content_cards{
@@ -136,3 +137,182 @@ body{
 padding: 4rem;
 }
 
+
+/*modal*/
+
+
+.kx-modal-open-btn {
+  padding: 12px 24px;
+  background: #7d5bed;
+  color: #fff;
+  font-size: 1rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.kx-modal-open-btn:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 15px rgba(125, 91, 237, 0.5);
+}
+
+/* Modal Overlay */
+.kx-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(45, 42, 74, 0.9);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+/* Modal Content */
+.kx-modal-content {
+  background: linear-gradient(145deg, #5e4b9e, #4a3b7f);
+  border-radius: 16px;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.6);
+  text-align: center;
+  padding: 20px;
+  max-width: 500px;
+  width: 90%;
+  position: relative;
+  transform: scale(0.8);
+  opacity: 0;
+  transition: transform 0.4s ease-out, opacity 0.4s ease-out;
+}
+
+/* Modal Visible */
+.kx-modal-overlay.kx-modal-active .kx-modal-content {
+  transform: scale(1);
+  opacity: 1;
+}
+
+/* Close Button */
+.kx-modal-close-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: transparent;
+  border: none;
+  color: #fff;
+  font-size: 1.5rem;
+  cursor: pointer;
+  transition: transform 0.3s;
+}
+
+.kx-modal-close-btn:hover {
+  transform: rotate(90deg);
+}
+
+/* Image Container */
+.kx-modal-image-container {
+  overflow: hidden;
+  border-radius: 12px;
+  margin-bottom: 20px;
+}
+
+.kx-modal-image {
+  width: 100%;
+  border-radius: 12px;
+  transition: transform 0.5s;
+}
+
+.kx-modal-image:hover {
+  transform: scale(1.1);
+}
+
+/* Modal Text */
+.kx-modal-text h1 {
+  font-size: 1.8rem;
+  margin-bottom: 10px;
+}
+
+.kx-modal-text p {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #e0e0e0;
+}
+
+/*modal*/
+
+.card button{
+  display: grid; place-items: center; }
+
+
+  @media screen and (max-width: 768px) {
+
+    .content_cards{
+      display: flex;
+      flex-direction: column;
+    }
+
+  }
+
+.initial-text h2{
+  color: white;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  text-align: center;
+  font-size: xx-large;
+}
+
+.initial-p{
+  color: white;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  text-align: justify;
+  font-size: xx-large;
+  padding: 5rem;
+}
+.initial-text button{
+background-color:#7d5bed;
+padding: 1rem;
+color: white;
+font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+font-size: x-large;
+border-radius: 15px;
+border: none;
+align-items: center;
+justify-content: center;
+}
+
+/*modal socials*/
+.socials img{
+  max-width: 2.5rem;
+}
+#name{
+  color: white;
+  font-weight: 800;
+  font-size: xx-large;
+
+}
+.about{
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  padding: 2rem;
+}
+.about-text{
+  display: flex;
+  justify-content: center;
+padding: 20px;
+max-width: 40%;
+font-size: xx-large;
+text-align: justify;
+color: wheat;
+font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+font-weight:bolder;
+
+}
+
+.about img{
+  display: flex;
+width: 300px;
+border-radius: 100%;
+display: grid;
+ place-items: center;
+ padding: 5rem
+}
