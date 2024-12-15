@@ -1,5 +1,17 @@
 body{
   background-color: #4e2772;
+  
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+}
+
+* {
+  box-sizing: border-box;
 }
 
 .quilombo-banner {
@@ -46,6 +58,7 @@ body{
   }
 
   @media (max-width: 768px) {
+
     .quilombo-banner {
       height: 60vh; /* Ajusta a altura para dispositivos móveis */
     }
@@ -251,6 +264,7 @@ padding: 4rem;
       flex-direction: column;
     }
 
+   
   }
 
 .initial-text h2{
@@ -291,15 +305,20 @@ justify-content: center;
 }
 .about{
   display: flex;
+  flex-direction: column;
   justify-content: center;
   text-align: center;
   padding: 2rem;
+  justify-content: center;
+  align-items: center;
+  
+  
 }
 .about-text{
   display: flex;
   justify-content: center;
 padding: 20px;
-max-width: 40%;
+max-width: 80%;
 font-size: xx-large;
 text-align: justify;
 color: wheat;
@@ -315,4 +334,396 @@ border-radius: 100%;
 display: grid;
  place-items: center;
  padding: 5rem
+}
+
+
+.video-youtube{
+  margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #6a11cb, #260f33, #3b2268);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            overflow: hidden;
+}
+
+
+.video-container {
+    position: relative;
+    width: 80%;
+    max-width: 900px;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    transform: scale(0.8);
+    animation: popIn 1.2s ease forwards;
+}
+
+@keyframes popIn {
+    0% {
+        transform: scale(0.5);
+        opacity: 0;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+.video-frame {
+    width: 100%;
+    height: 0;
+    padding-bottom: 56.25%; /* Aspect ratio 16:9 */
+    background: #000;
+    position: relative;
+}
+
+.video-frame iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+.video-title {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    right: 10px;
+    background: rgba(0, 0, 0, 0.7);
+    color: #fff;
+    padding: 10px;
+    border-radius: 10px;
+    font-size: 18px;
+    text-align: center;
+    animation: fadeIn 1.5s ease-in forwards;
+    opacity: 0;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.video-container:hover {
+    transform: scale(1.05);
+    transition: transform 0.3s ease;
+}
+
+.glow-effect {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    box-shadow: 0 0 30px rgba(255, 255, 255, 0.3),
+                0 0 60px rgba(255, 255, 255, 0.2);
+    pointer-events: none;
+    animation: pulse 2.5s infinite;
+}
+
+@keyframes pulse {
+    0%, 100% {
+        box-shadow: 0 0 30px rgba(255, 255, 255, 0.3),
+                    0 0 60px rgba(255, 255, 255, 0.2);
+    }
+    50% {
+        box-shadow: 0 0 50px rgba(255, 255, 255, 0.5),
+                    0 0 80px rgba(255, 255, 255, 0.3);
+    }
+}
+
+/* Responsiveness */
+@media (max-width: 768px) {
+    .video-container {
+        width: 95%;
+    }
+
+    .video-title {
+        font-size: 16px;
+    }
+}
+
+#title-video{
+  color: white;
+}
+
+
+
+.podcasts {
+  font-family: 'Arial', sans-serif;
+  background-color: #2A0A6F;
+  color: white;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 30px;
+  max-width: 1200px;
+  width: 100%;
+  padding: 20px;
+  box-sizing: border-box;
+  justify-items: center; /* Isso garante que os cards sejam centralizados horizontalmente */
+  align-items: center; /* Isso garante que os cards sejam centralizados verticalmente */
+}
+
+/* Cards */
+.podcast-card {
+  background: #3D1C8C;
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+  overflow: hidden;
+  position: relative;
+  cursor: pointer;
+  box-shadow: 0px 15px 40px rgba(0, 0, 0, 0.5);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.podcast-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.podcast-card:hover {
+  transform: scale(1.1);
+  box-shadow: 0px 20px 60px rgba(0, 0, 0, 0.7);
+}
+
+.podcast-card:hover img {
+  transform: scale(1.1);
+}
+
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+.modal-content {
+  background-color: #3D1C8C;
+  padding: 30px;
+  border-radius: 10px;
+  width: 80%;
+  max-width: 600px;
+  color: white;
+  text-align: center;
+  animation: slideUp 0.5s ease;
+}
+
+.modal-content h2 {
+  margin-bottom: 20px;
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.modal-content p {
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+
+.modal-close {
+  background: #FF4081;
+  padding: 10px 20px;
+  color: white;
+  font-size: 18px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.modal-close:hover {
+  background: #E40062;
+}
+
+/* Animações */
+@keyframes fadeIn {
+  from {
+      opacity: 0;
+  }
+  to {
+      opacity: 1;
+  }
+}
+
+/* Responsividade */
+@media (max-width: 1024px) {
+  .container {
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 20px;
+  }
+
+  .podcast-card {
+    width: 220px;
+    height: 220px;
+  }
+}
+
+@media (max-width: 768px) {
+
+ 
+  .container {
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 15px;
+  }
+
+  .podcast-card {
+    width: 180px;
+    height: 180px;
+  }
+
+  .modal-content {
+    width: 90%;
+    padding: 20px;
+  }
+
+  .modal-content h2 {
+    font-size: 24px;
+  }
+
+  .modal-content p {
+    font-size: 16px;
+  }
+
+ .about-text{
+  font-size: large;
+  max-width: max-content;
+ }
+ .initial-p{
+  font-size: large;
+  max-width: 100%;
+  padding: 15px;
+ }
+}
+
+nav {
+  background-color: #2A0A6F;
+  padding: 10px 0;
+}
+
+.nav-bar {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.nav {
+  margin: 0 20px;
+  font-size: 18px;
+  font-family: Arial, sans-serif;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  transition: background-color 0.5s ease, color 3s ease;
+  transition-duration: 2s;
+}
+
+.nav:hover {
+  background-color: #3D1C8C;
+  color: #3b01a8;
+  border-radius: 5px;
+  padding: 5px 10px;
+  transition-duration: 2s;
+  color: white;
+}
+
+/* Estilos para quando o menu for menor (responsivo) */
+@media (max-width: 768px) {
+  .nav-bar {
+    flex-direction: column;
+    align-items: flex-start;
+    margin-left: 20px;
+  }
+
+  .nav {
+    margin: 10px 0;
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .nav {
+    font-size: 14px;
+  }
+}
+
+
+
+@media (max-width: 480px) {
+  .container {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+
+  .podcast-card {
+    width: 150px;
+    height: 150px;
+  }
+
+  .modal-content {
+    width: 95%;
+    padding: 15px;
+  }
+
+  .modal-content h2 {
+    font-size: 20px;
+  }
+
+  .modal-content p {
+    font-size: 14px;
+  }
+}
+
+
+@keyframes slideUp {
+  from {
+      transform: translateY(50px);
+  }
+  to {
+      transform: translateY(0);
+  }
+}
+
+/* Ações de estilo */
+a {
+  text-decoration: none;
+  color: #FFD700;
+}
+
+a:hover {
+  text-decoration: underline;
 }
