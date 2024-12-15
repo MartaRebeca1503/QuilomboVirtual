@@ -79,6 +79,11 @@ html, body {
     margin: 5dvh;
 }
 
+.link-page{
+    text-decoration: none;
+    color: #f2f2f2;
+}
+
 .card-infor{
     display: flex;
     flex-direction: column;
