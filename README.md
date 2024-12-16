@@ -30,9 +30,11 @@ O Quilombo Virtual é um projeto **open-source** e **colaborativo**! Se você te
 - **Css**: Estilização.
 - **GitHub Pages** para publicação.
 
+
+
 ## Como Rodar Localmente
 
 1. **Clone o repositório**:
 
 ```bash
-jj
+https://github.com/MartaRebeca1503/QuilomboVirtual
