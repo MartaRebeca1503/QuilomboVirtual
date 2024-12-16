@@ -1,4 +1,6 @@
 # Quilombo Virtual 💜🏹🚀
+<br>
+veja online: https://kelvisduank.github.io/quilombovirtual2024.io/
 
 **Quilombo Virtual** é um projeto dedicado a criar um espaço online de apoio, informação e comunidade, com o objetivo de ajudar e empoderar pessoas. Inspirado nas tradições dos quilombos, onde as comunidades se uniam para a sobrevivência, resistência e apoio mútuo, nosso projeto busca trazer essa filosofia para o mundo digital, oferecendo conteúdos valiosos e suporte. 🌟
 
