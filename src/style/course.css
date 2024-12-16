@@ -47,6 +47,12 @@ html, body {
 }
 /* End of Navigation Bar */
 
+#banner{
+    width: 100dvw;
+    background-image: url('../img/courses/bannerPost.png');
+    background-size: cover;
+}
+    
 #description{
     display: flex;
     flex-direction: column;
@@ -75,8 +81,14 @@ html, body {
 #card-courses{
     display: flex;
     justify-content: center;
+    flex-wrap: wrap;
     gap: 2dvw;
     margin: 5dvh;
+}
+
+.description-destaque{
+    font-size: 0.9rem;
+    flex-wrap: wrap;
 }
 
 .link-page{
@@ -98,6 +110,7 @@ html, body {
 
 .img-course{
     border-radius: 10px;
+    width: 15dvw;
 }
 
 .link-course{
