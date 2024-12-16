@@ -1,0 +1,213 @@
+/* Reset de estilo */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    overflow-x: hidden;
+}
+
+/* Header */
+header {
+    background-color: #4b0082;
+    color: white;
+    text-align: center;
+    padding: 70px;
+    position: relative;
+    animation: fadeIn 2s ease-out;
+}
+
+.header-content h1 {
+    font-size: 2.8rem;
+    margin-bottom: 20px;
+    animation: slideInFromTop 1.5s ease-out;
+}
+
+.header-content p {
+    font-size: 1.2rem;
+    margin-top: 10px;
+    animation: fadeInUp 2s ease-out;
+}
+
+/* Animações */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideInFromTop {
+    from {
+        transform: translateY(-50px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        transform: translateY(30px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes rotateVinyl {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+/* Cards dos desenvolvedores */
+.developers {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    padding: 50px 10px;
+    animation: fadeIn 2s ease-out;
+}
+
+.developer-card {
+    width: 23%;
+    background-color: white;
+    border-radius: 15px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    margin: 15px;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    opacity: 0;
+    transform: translateY(30px);
+    animation: fadeInUp 2s ease-out 1s forwards;
+}
+
+.developer-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+}
+
+.card-content {
+    padding: 20px;
+    text-align: center;
+}
+
+.card-content h2 {
+    margin: 10px 0;
+    font-size: 1.5rem;
+}
+
+.card-content p {
+    font-size: 1rem;
+    color: #777;
+}
+
+.modal-btn {
+    padding: 10px 20px;
+    background-color: #4b0082;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 15px;
+    transition: background-color 0.3s ease;
+}
+
+.modal-btn:hover {
+    background-color: #6a0dad;
+}
+
+/* Modal */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.6);
+    animation: fadeIn 0.5s ease-out;
+}
+
+.modal-content {
+    background-color: #fff;
+    margin: 15% auto;
+    padding: 20px;
+    border-radius: 10px;
+    width: 70%;
+    max-width: 600px;
+    animation: slideInFromTop 0.5s ease-out;
+}
+
+.modal-content img {
+    width: 100%;
+    border-radius: 10px;
+    object-fit: cover;
+    max-height: 300px;
+}
+
+/* Vinyl Animation */
+.vinyl {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 5px solid #333;
+    position: relative;
+    margin: 0 auto;
+    animation: rotateVinyl 10s linear infinite;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.developer-photo {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+    animation: rotateVinyl 10s linear infinite reverse;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .developer-card {
+        width: 45%;
+    }
+}
+
+@media (max-width: 480px) {
+    .developer-card {
+        width: 90%;
+    }
+}
+
+.close-btn {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close-btn:hover,
+.close-btn:focus {
+    color: black;
+    text-decoration: none;
+}
