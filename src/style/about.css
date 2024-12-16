@@ -211,3 +211,30 @@ header {
     color: black;
     text-decoration: none;
 }
+
+
+
+.star {
+    font-size: 24px;
+    color: gray;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.star.highlighted {
+    color: gold;
+}
+
+.rating {
+    display: flex;
+    gap: 5px;
+    justify-content: center;
+    margin: 10px 0;
+}
+
+.modal-rating {
+    text-align: center;
+    margin: 10px 0;
+    font-size: 18px;
+    font-weight: bold;
+}
